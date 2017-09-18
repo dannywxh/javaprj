@@ -1,0 +1,29 @@
+/*getPowerList*/
+select a.id,a.name,a.code,a.mark,a.yxx,NVL(b.JC,b.MC) yxxmc,
+	   to_char(a.gxsj,'yyyy-MM-dd HH24:mi') gxsj,
+	   case when $cnd then 0 else 1 end sx 
+from SYS_AUTHORITY a
+		left join PM_CODE b on b.lx='YXX' and b.dm=to_char(a.yxx)
+$condition
+order by sx,a.name
+
+/*getResourceByPowerId*/
+select a.id,a.authorityid,a.resourcesid,a.param,b.name,b.url,b.yxx,NVL(c.JC,c.MC) yxxmc,b.project
+from SYS_AUTHORITY_RESOURCES a
+join SYS_RESOURCES b on b.id=a.resourcesid and b.yxx!=0
+left join PM_CODE c on c.lx='YXX' and c.dm=b.yxx
+$condition
+order by b.yxx,b.url
+
+/*getPowerTree*/
+select a.id "id",a.pid "pid",a.name "name",a.mark "col1",
+       case
+         when exists(select id from  SYS_AUTHORITY b where b.pid is not null and a.id =b.pid and b.yxx <> 0) then
+          'true'
+         else
+          'false'
+       end "isParent" 
+from SYS_AUTHORITY a 
+where a.yxx <> 0 
+$condition
+order by a.name

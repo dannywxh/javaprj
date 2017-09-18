@@ -1,0 +1,41 @@
+/*getUserList*/
+select 
+	a.id,a.xm,a.sfzh,a.account,a.remark,a.yxx,
+	c.name jgmc, 
+	e.name gwmc,
+	NVL(b.JC,b.MC) yxxmc, 
+	to_char(a.gxsj ,'yyyy-mm-dd hh24:mi') gxsj
+from SYS_USER a
+left join WORK_DEPT c on c.id=a.jgdm
+left join WORK_POST e on e.id=a.gwdm
+left join PM_CODE b on b.lx='YXX' and b.dm=to_char(a.yxx)
+$where
+order by a.jgdm,a.yxx,a.account
+
+/*getUserById*/
+select * from (
+select a.*,b.name jgmc
+from SYS_USER a
+left join WORK_DEPT b on a.jgdm=b.id
+$condition
+)
+where rownum<=1
+
+/*getPowerList*/
+select a.id,a.name,a.mark,a.yxx from SYS_AUTHORITY a
+$condition
+
+/*getRoleIdByUserId*/
+select a.roleid 
+from SYS_USER_role a 
+where a.userid = @userid
+
+/*deleteUserRole*/
+delete from SYS_USER_role a 
+where a.userid in ($userID) and a.roleid in ($roleID)
+
+/*saveUserRole*/
+insert into SYS_USER_role(id,userid,roleid)
+select sys_guid() i_id,a.id u_id,b.id r_id 
+from SYS_USER a join SYS_ROLE b on b.id in($roleID)
+where a.id in($userID)

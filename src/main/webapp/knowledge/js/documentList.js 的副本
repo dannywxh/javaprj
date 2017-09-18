@@ -1,0 +1,204 @@
+$(function(){
+	var pageSize=7;
+    
+	var paopt={
+		    id: null,
+            name: null,
+            pageType: null,
+            total: 0,
+            page: 1,
+            rows: pageSize,
+            maxCount: 1,
+            minCount: 1,
+            step: 3,
+            sizeArray: [10, 20, 30, 40],
+            model: "full",
+            pageList: []
+	}
+	//初始化树
+	$('#a').skynetTree({
+		mode : "normal",
+		minWidth : 300,
+		minHeight : 300,
+		callBack:{
+			onClick:function(event, treeId, treeNode){
+				//根据当前的相关性id查询数据
+				var cid=treeNode.id;
+				 $.ajax({
+					   type: "POST",
+					   dataType:"json",
+					   url: "document/getDocsById?cid="+cid,
+					   cache: false,
+					   success: function(data){
+						   //初始化分页组件
+						   var total=data.length;					   
+						   var pc=1;
+						          paopt={
+								    id: null,
+						            name: null,
+						            pageType: null,
+						            total: total,
+						           /* pageCount:15,*/
+						            page: 1,
+						            rows: pageSize,
+						            maxCount: 1,
+						            minCount: 1,
+						            step: 3,
+						            sizeArray: [10, 20, 30, 40],
+						            model: "full",
+						            pageList: data
+							}   
+						   $("#pager").skynetPager(paopt,{
+								 getDataSize: function () {
+						             return data.length;
+						         },
+						         loaderData: function () {
+						            return data;
+						         },
+						         onClick:function () {
+						        	 //当前页起始值 this.option.page
+						        	 var currentPageStart=(this.option.page-1)*pageSize;
+						        	 var html="<hr>";
+									   var space="&nbsp;&nbsp;";
+									   $.each(data,function(index,d){
+										   if(index>=currentPageStart&&index<(currentPageStart+pageSize)){
+										    html+="<div style='border:0px solid red;'><div style='width:38%;border:0px solid blue;float:left;'>用例名称:"+d.ylmc+"&nbsp;&nbsp;&nbsp;&nbsp;</div><div style='width:58%;border:0px solid green;float:left;'>执行情况:执行<font color='blue'>"+(d.y+d.n)+"</font>次，通过<font color='green'>"+d.y+"</font>次，不通过<font color='red'>"+d.n+"</font>次;" +space+
+										  		"<input type='radio' name='"+d.id+"_xslx' value='bxs' id='"+d.id+"_bxs' onclick='getDqZxqkData(\""+d.id+"_bxs\")' checked='checked'>不显示" +space+
+										  		"<input type='radio' name='"+d.id+"_xslx' value='xsqb' id='"+d.id+"_xsqb' onclick='getDqZxqkData(\""+d.id+"_xsqb\")'>显示全部" +space+
+										  		"<input type='radio' name='"+d.id+"_xslx' value='xstg' id='"+d.id+"_xstg' onclick='getDqZxqkData(\""+d.id+"_xstg\")'>显示通过" +space+
+										  		"<input type='radio' name='"+d.id+"_xslx' value='xsbtg'id='"+d.id+"_xsbtg' onclick='getDqZxqkData(\""+d.id+"_xsbtg\")'>显示不通过" +
+										  		"</div></div><div id='zxqk_list_"+d.id+"' style='display:none;'><div name='div_zxqk' id='div_zxqk_"+d.id+"' style='width:96%;border:0px solid #ff33cc;float:left;'></div><div id='zxqk_pager_"+d.id+"'></div><br/><a href='javascript:shouqi(\""+d.id+"\")' id='shouqi_"+d.id+"'>&nbsp;&nbsp;《收起》</a></div><br/><hr>";
+										   }
+									   });
+									   $("#grid_index").html(html);
+						         }
+							});
+						  
+						 //点击树而没有点击页码时要默认显示第一页的数据
+							  var html="<hr>";
+							   var space="&nbsp;&nbsp;";
+							   $.each(data,function(index,d){
+								   if(index>=0&&index<pageSize){
+								    html+="<div style='border:0px solid red;'><div style='width:38%;border:0px solid blue;float:left;'>用例名称:"+d.ylmc+"&nbsp;&nbsp;&nbsp;&nbsp;</div><div style='width:58%;border:0px solid green;float:left;'>执行情况:执行<font color='blue'>"+(d.y+d.n)+"</font>次，通过<font color='green'>"+d.y+"</font>次，不通过<font color='red'>"+d.n+"</font>次;" +space+
+								  		"<input type='radio' name='"+d.id+"_xslx' value='bxs' id='"+d.id+"_bxs' onclick='getDqZxqkData(\""+d.id+"_bxs\")' checked='checked'>不显示" +space+
+								  		"<input type='radio' name='"+d.id+"_xslx' value='xsqb' id='"+d.id+"_xsqb' onclick='getDqZxqkData(\""+d.id+"_xsqb\")'>显示全部" +space+
+								  		"<input type='radio' name='"+d.id+"_xslx' value='xstg' id='"+d.id+"_xstg' onclick='getDqZxqkData(\""+d.id+"_xstg\")'>显示通过" +space+
+								  		"<input type='radio' name='"+d.id+"_xslx' value='xsbtg'id='"+d.id+"_xsbtg' onclick='getDqZxqkData(\""+d.id+"_xsbtg\")'>显示不通过" +
+								  		"</div></div><div id='zxqk_list_"+d.id+"' style='display:none;'><div name='div_zxqk' id='div_zxqk_"+d.id+"' style='width:96%;border:0px solid #ff33cc;float:left;'></div><div id='zxqk_pager_"+d.id+"'></div><br/><a href='javascript:shouqi(\""+d.id+"\")' id='shouqi_"+d.id+"'>&nbsp;&nbsp;《收起》</a></div><br/><hr>";
+								   }
+							   });
+							   $("#grid_index").html(html);
+					   }
+					});
+			}
+		}
+	  
+	});
+	$("#btn_search").click(function(){
+		var ylmc=$("input[name='ylmc']").val();
+		var bb=$("[name='bb']").val();
+		var sftg=$("[name='sftg']").val();
+		 $.ajax({
+			   type: "POST",
+			   dataType:"json",
+			   url: "test/testCaseQueryByCnd2?ylmc="+ylmc+"&bb="+bb+"&sftg="+sftg,
+			   cache: false,
+			   success: function(data){
+				   var html="";
+				   var space="&nbsp;&nbsp;";
+				   $.each(data,function(index,d){
+					  html+="<div style='border:0px solid red;'><div style='width:38%;border:0px solid blue;float:left;'>用例名称:"+d.ylmc+"&nbsp;&nbsp;&nbsp;&nbsp;</div><div style='width:58%;border:0px solid green;float:left;'>执行情况:执行<font color='blue'>"+(d.y+d.n)+"</font>次，通过<font color='green'>"+d.y+"</font>次，不通过<font color='red'>"+d.n+"</font>次;" +space+
+					  		"<input type='radio' name='"+d.id+"_xslx' value='bxs' id='"+d.id+"_bxs' onclick='getDqZxqkData(\""+d.id+"_bxs\")' checked='checked'>不显示" +space+
+					  		"<input type='radio' name='"+d.id+"_xslx' value='xsqb' id='"+d.id+"_xsqb' onclick='getDqZxqkData(\""+d.id+"_xsqb\")'>显示全部" +space+
+					  		"<input type='radio' name='"+d.id+"_xslx' value='xstg' id='"+d.id+"_xstg' onclick='getDqZxqkData(\""+d.id+"_xstg\")'>显示通过" +space+
+					  		"<input type='radio' name='"+d.id+"_xslx' value='xsbtg'id='"+d.id+"_xsbtg' onclick='getDqZxqkData(\""+d.id+"_xsbtg\")'>显示不通过" +
+					  		"</div></div><div name='div_zxqk' id='div_zxqk_"+d.id+"' style='width:96%;border:0px solid #ff33cc;float:left;'></div><br/><hr>"
+				   });
+				   $("#grid_index").html(html);
+			   }
+			});
+	});
+});
+
+function getDqZxqkData(testCaseId){
+	var data=[];
+	var pageSize_zxqk=3;
+	var i=testCaseId.indexOf("_");
+	var testCaseIdCon=testCaseId.substring(0,i);
+	//显示影藏块
+	$("#zxqk_list_"+testCaseIdCon).show();
+	//为了达到互斥效果，先清除所有执行情况块的内容
+	//$("div[name='div_zxqk']").html("");
+	 $.ajax({
+		   type: "POST",
+		   dataType:"json",
+		   url: "test/zxqkQueryByTestCaseId?testCaseId="+testCaseId,
+		   cache: false,
+		   success: function(da){
+			   data=da;
+			   if(data!=null){
+				 //初始化分页组件
+				   var total=data.length;					   
+				         var pao={
+						    id: null,
+				            name: null,
+				            pageType: null,
+				            total: total,
+				            page: 1,
+				            rows: pageSize_zxqk,
+				            maxCount: 1,
+				            minCount: 1,
+				            step: 3,
+				            sizeArray: [10, 20, 30, 40],
+				            model: "full",
+				            pageList: data
+					} 
+				         $("#zxqk_pager_"+testCaseIdCon).skynetPager(pao,{
+							 getDataSize: function () {
+					             return data.length;
+					         },
+					         loaderData: function () {
+					            return data;
+					         },
+					         onClick:function () {
+					        	 //当前页起始值 this.option.page
+					        	 var currentPageStart=(this.option.page-1)*pageSize_zxqk;
+					        	 var html="<hr>";
+								   var space="&nbsp;&nbsp;";
+								   $.each(data,function(index,d){
+									   var btgyy=d.btgyy;
+									   if(btgyy==undefined){
+										   btgyy="";
+									   }
+									   if(index>=currentPageStart&&index<(currentPageStart+pageSize_zxqk)){
+										   html+="<div style='border:0px solid yellow; float:left;'><div style='width:200px; float:left; border:0px solid red;'>"+d.zxsj+space+d.sftg+"</div>";
+										   html+="<div style='width:758px;float:right; border:0px solid blue;'>"+btgyy+"</div></div>";
+									   }
+								   });
+								   $("#div_zxqk_"+testCaseIdCon).html(html);  
+					         }
+						});        
+				   var space="&nbsp;&nbsp;";
+				   var html="";
+				   $.each(data,function(index,d){
+					   var btgyy=d.btgyy;
+					   if(btgyy==undefined){
+						   btgyy="";
+					   }
+					   if(index>=0&&index<pageSize_zxqk){
+						   html+="<div style='border:0px solid yellow; float:left;'><div style='width:200px; float:left; border:0px solid red;'>"+d.zxsj+space+d.sftg+"</div>";
+						   html+="<div style='width:758px;float:right; border:0px solid blue;'>"+btgyy+"</div></div>";
+					   }
+				   });
+				  $("#div_zxqk_"+testCaseIdCon).html(html);           
+			   }
+		   }
+		});
+}
+
+function shouqi(shouqiid){
+	$("#zxqk_list_"+shouqiid).hide();
+}
+
+
+

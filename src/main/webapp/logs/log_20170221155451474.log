@@ -1,0 +1,1236 @@
+[异常日志信息]- 2017-02-21 15:54:51
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocsById,
+	arg:["39c0a19c-15ba-414d-a9fc-52f04acb1b37"],
+	url:http://localhost:8080/KManage/document/getDocsById,
+	param:,
+	info:org.cox.dao.DaoException:org.cox.dao.DaoException: !Cox SQL Error: 'select * from km_doc where cid=39c0a19c-15ba-414d-a9fc-52f04acb1b37'
+PreparedStatement: 
+'select * from km_doc where cid=39c0a19c-15ba-414d-a9fc-52f04acb1b37'
+	at org.cox.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:101)
+	at org.cox.dao.impl.DaoSupport._exec(DaoSupport.java:232)
+	at org.cox.dao.impl.DaoSupport.execute(DaoSupport.java:205)
+	at com.skynet.knowledge.services.DocumentService.getDocsByCId(DocumentService.java:73)
+	at com.skynet.knowledge.action.DocumentAction.getDocsById(DocumentAction.java:41)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-02-21 15:54:51,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-02-21 16:28:28
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocsById,
+	arg:["'f4f0ad9a-2756-46b5-9f12-9b9a55da1501'"],
+	url:http://localhost:8080/KManage/document/getDocsById,
+	param:,
+	info:org.cox.dao.DaoException:org.cox.dao.DaoException: !Cox SQL Error: 'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+PreparedStatement: 
+'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+	at org.cox.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:101)
+	at org.cox.dao.impl.DaoSupport._exec(DaoSupport.java:232)
+	at org.cox.dao.impl.DaoSupport.execute(DaoSupport.java:205)
+	at com.skynet.knowledge.services.DocumentService.getDocsByCId(DocumentService.java:73)
+	at com.skynet.knowledge.action.DocumentAction.getDocsById(DocumentAction.java:41)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-02-21 16:28:28,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-02-21 16:28:30
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocsById,
+	arg:["'f4f0ad9a-2756-46b5-9f12-9b9a55da1501'"],
+	url:http://localhost:8080/KManage/document/getDocsById,
+	param:,
+	info:org.cox.dao.DaoException:org.cox.dao.DaoException: !Cox SQL Error: 'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+PreparedStatement: 
+'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+	at org.cox.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:101)
+	at org.cox.dao.impl.DaoSupport._exec(DaoSupport.java:232)
+	at org.cox.dao.impl.DaoSupport.execute(DaoSupport.java:205)
+	at com.skynet.knowledge.services.DocumentService.getDocsByCId(DocumentService.java:73)
+	at com.skynet.knowledge.action.DocumentAction.getDocsById(DocumentAction.java:41)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-02-21 16:28:30,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-02-21 16:28:59
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocsById,
+	arg:["'f4f0ad9a-2756-46b5-9f12-9b9a55da1501'"],
+	url:http://localhost:8080/KManage/document/getDocsById,
+	param:,
+	info:org.cox.dao.DaoException:org.cox.dao.DaoException: !Cox SQL Error: 'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+PreparedStatement: 
+'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+	at org.cox.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:101)
+	at org.cox.dao.impl.DaoSupport._exec(DaoSupport.java:232)
+	at org.cox.dao.impl.DaoSupport.execute(DaoSupport.java:205)
+	at com.skynet.knowledge.services.DocumentService.getDocsByCId(DocumentService.java:73)
+	at com.skynet.knowledge.action.DocumentAction.getDocsById(DocumentAction.java:41)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-02-21 16:28:59,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-02-21 16:29:24
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocsById,
+	arg:["'f4f0ad9a-2756-46b5-9f12-9b9a55da1501'"],
+	url:http://localhost:8080/KManage/document/getDocsById,
+	param:,
+	info:org.cox.dao.DaoException:org.cox.dao.DaoException: !Cox SQL Error: 'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+PreparedStatement: 
+'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+	at org.cox.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:101)
+	at org.cox.dao.impl.DaoSupport._exec(DaoSupport.java:232)
+	at org.cox.dao.impl.DaoSupport.execute(DaoSupport.java:205)
+	at com.skynet.knowledge.services.DocumentService.getDocsByCId(DocumentService.java:73)
+	at com.skynet.knowledge.action.DocumentAction.getDocsById(DocumentAction.java:41)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-02-21 16:29:24,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-02-21 16:29:45
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocsById,
+	arg:["'f4f0ad9a-2756-46b5-9f12-9b9a55da1501'"],
+	url:http://localhost:8080/KManage/document/getDocsById,
+	param:,
+	info:org.cox.dao.DaoException:org.cox.dao.DaoException: !Cox SQL Error: 'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+PreparedStatement: 
+'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+	at org.cox.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:101)
+	at org.cox.dao.impl.DaoSupport._exec(DaoSupport.java:232)
+	at org.cox.dao.impl.DaoSupport.execute(DaoSupport.java:205)
+	at com.skynet.knowledge.services.DocumentService.getDocsByCId(DocumentService.java:73)
+	at com.skynet.knowledge.action.DocumentAction.getDocsById(DocumentAction.java:41)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-02-21 16:29:45,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-02-21 16:29:47
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocsById,
+	arg:["'f4f0ad9a-2756-46b5-9f12-9b9a55da1501'"],
+	url:http://localhost:8080/KManage/document/getDocsById,
+	param:,
+	info:org.cox.dao.DaoException:org.cox.dao.DaoException: !Cox SQL Error: 'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+PreparedStatement: 
+'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+	at org.cox.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:101)
+	at org.cox.dao.impl.DaoSupport._exec(DaoSupport.java:232)
+	at org.cox.dao.impl.DaoSupport.execute(DaoSupport.java:205)
+	at com.skynet.knowledge.services.DocumentService.getDocsByCId(DocumentService.java:73)
+	at com.skynet.knowledge.action.DocumentAction.getDocsById(DocumentAction.java:41)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-02-21 16:29:47,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-02-21 16:29:48
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocsById,
+	arg:["'f4f0ad9a-2756-46b5-9f12-9b9a55da1501'"],
+	url:http://localhost:8080/KManage/document/getDocsById,
+	param:,
+	info:org.cox.dao.DaoException:org.cox.dao.DaoException: !Cox SQL Error: 'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+PreparedStatement: 
+'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+	at org.cox.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:101)
+	at org.cox.dao.impl.DaoSupport._exec(DaoSupport.java:232)
+	at org.cox.dao.impl.DaoSupport.execute(DaoSupport.java:205)
+	at com.skynet.knowledge.services.DocumentService.getDocsByCId(DocumentService.java:73)
+	at com.skynet.knowledge.action.DocumentAction.getDocsById(DocumentAction.java:41)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-02-21 16:29:48,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-02-21 16:29:48
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocsById,
+	arg:["'f4f0ad9a-2756-46b5-9f12-9b9a55da1501'"],
+	url:http://localhost:8080/KManage/document/getDocsById,
+	param:,
+	info:org.cox.dao.DaoException:org.cox.dao.DaoException: !Cox SQL Error: 'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+PreparedStatement: 
+'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+	at org.cox.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:101)
+	at org.cox.dao.impl.DaoSupport._exec(DaoSupport.java:232)
+	at org.cox.dao.impl.DaoSupport.execute(DaoSupport.java:205)
+	at com.skynet.knowledge.services.DocumentService.getDocsByCId(DocumentService.java:73)
+	at com.skynet.knowledge.action.DocumentAction.getDocsById(DocumentAction.java:41)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-02-21 16:29:48,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-02-21 16:29:49
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocsById,
+	arg:["'f4f0ad9a-2756-46b5-9f12-9b9a55da1501'"],
+	url:http://localhost:8080/KManage/document/getDocsById,
+	param:,
+	info:org.cox.dao.DaoException:org.cox.dao.DaoException: !Cox SQL Error: 'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+PreparedStatement: 
+'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1501'''
+	at org.cox.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:101)
+	at org.cox.dao.impl.DaoSupport._exec(DaoSupport.java:232)
+	at org.cox.dao.impl.DaoSupport.execute(DaoSupport.java:205)
+	at com.skynet.knowledge.services.DocumentService.getDocsByCId(DocumentService.java:73)
+	at com.skynet.knowledge.action.DocumentAction.getDocsById(DocumentAction.java:41)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-02-21 16:29:49,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-02-21 16:30:11
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocsById,
+	arg:["'f4f0ad9a-2756-46b5-9f12-9b9a55da1508'"],
+	url:http://localhost:8080/KManage/document/getDocsById,
+	param:,
+	info:org.cox.dao.DaoException:org.cox.dao.DaoException: !Cox SQL Error: 'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1508'''
+PreparedStatement: 
+'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1508'''
+	at org.cox.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:101)
+	at org.cox.dao.impl.DaoSupport._exec(DaoSupport.java:232)
+	at org.cox.dao.impl.DaoSupport.execute(DaoSupport.java:205)
+	at com.skynet.knowledge.services.DocumentService.getDocsByCId(DocumentService.java:73)
+	at com.skynet.knowledge.action.DocumentAction.getDocsById(DocumentAction.java:41)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-02-21 16:30:11,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-02-21 16:30:23
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocsById,
+	arg:["'f4f0ad9a-2756-46b5-9f12-9b9a55da1508'"],
+	url:http://localhost:8080/KManage/document/getDocsById,
+	param:,
+	info:org.cox.dao.DaoException:org.cox.dao.DaoException: !Cox SQL Error: 'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1508'''
+PreparedStatement: 
+'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1508'''
+	at org.cox.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:101)
+	at org.cox.dao.impl.DaoSupport._exec(DaoSupport.java:232)
+	at org.cox.dao.impl.DaoSupport.execute(DaoSupport.java:205)
+	at com.skynet.knowledge.services.DocumentService.getDocsByCId(DocumentService.java:73)
+	at com.skynet.knowledge.action.DocumentAction.getDocsById(DocumentAction.java:41)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-02-21 16:30:23,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-02-21 16:30:44
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocsById,
+	arg:["'f4f0ad9a-2756-46b5-9f12-9b9a55da1508'"],
+	url:http://localhost:8080/KManage/document/getDocsById,
+	param:,
+	info:org.cox.dao.DaoException:org.cox.dao.DaoException: !Cox SQL Error: 'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1508'''
+PreparedStatement: 
+'select * from km_doc where cid=''f4f0ad9a-2756-46b5-9f12-9b9a55da1508'''
+	at org.cox.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:101)
+	at org.cox.dao.impl.DaoSupport._exec(DaoSupport.java:232)
+	at org.cox.dao.impl.DaoSupport.execute(DaoSupport.java:205)
+	at com.skynet.knowledge.services.DocumentService.getDocsByCId(DocumentService.java:73)
+	at com.skynet.knowledge.action.DocumentAction.getDocsById(DocumentAction.java:41)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-02-21 16:30:44,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-02-21 16:58:40
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocsById,
+	arg:["f4f0ad9a-2756-46b5-9f12-9b9a55da1508", 0, 0],
+	url:http://localhost:8080/KManage/document/getDocsById,
+	param:{"cid":["f4f0ad9a-2756-46b5-9f12-9b9a55da1508"],"pageNumber":["1"],"pageSize":["10"]},
+	info:org.cox.dao.DaoException:org.cox.dao.DaoException: !Cox SQL Error: 'select count(1) FROM (select * from km_doc where cid=' WHERE cid='f4f0ad9a-2756-46b5-9f12-9b9a55da1508'')'
+PreparedStatement: 
+'select count(1) FROM (select * from km_doc where cid=' WHERE cid='f4f0ad9a-2756-46b5-9f12-9b9a55da1508'')'
+	at org.cox.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:101)
+	at org.cox.dao.impl.DaoSupport._exec(DaoSupport.java:232)
+	at org.cox.dao.impl.DaoSupport.execute(DaoSupport.java:205)
+	at org.cox.dao.util.Daos.queryCount(Daos.java:260)
+	at com.skynet.knowledge.services.DocumentService.getDocPageDataByCId(DocumentService.java:93)
+	at com.skynet.knowledge.action.DocumentAction.getDocsById(DocumentAction.java:45)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-02-21 16:58:40,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:13:36
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocs,
+	arg:[null, null, null, 1, 10],
+	url:http://localhost:8080/KManage/document/getDocs,
+	param:{"pageNumber":["1"],"pageSize":["10"]},
+	info:org.cox.dao.SqlNotFoundException:fail to find SQL 'getDocs'!
+	at org.cox.dao.impl.AbstractSqlManager.get(AbstractSqlManager.java:79)
+	at com.skynet.knowledge.services.DocumentService.queryDocs(DocumentService.java:132)
+	at com.skynet.knowledge.action.DocumentAction.getDocs(DocumentAction.java:76)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:13:36,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:14:59
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/insertNode,
+	arg:["cccc44a6-7812-44b1-9bc2-092468cfbf7c", "YYY"],
+	url:http://localhost:8080/KManage/document/insertNode,
+	param:{"pid":["cccc44a6-7812-44b1-9bc2-092468cfbf7c"],"name":["YYY"]},
+	info:java.lang.ClassCastException:org.cox.dao.entity.Record cannot be cast to com.skynet.knowledge.bean.User
+	at com.skynet.knowledge.utils.KmUtils.getLoginUser(KmUtils.java:13)
+	at com.skynet.knowledge.action.DocumentAction.insertNode(DocumentAction.java:276)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:14:59,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:15:02
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/insertNode,
+	arg:["cccc44a6-7812-44b1-9bc2-092468cfbf7c", "YYY"],
+	url:http://localhost:8080/KManage/document/insertNode,
+	param:{"pid":["cccc44a6-7812-44b1-9bc2-092468cfbf7c"],"name":["YYY"]},
+	info:java.lang.ClassCastException:org.cox.dao.entity.Record cannot be cast to com.skynet.knowledge.bean.User
+	at com.skynet.knowledge.utils.KmUtils.getLoginUser(KmUtils.java:13)
+	at com.skynet.knowledge.action.DocumentAction.insertNode(DocumentAction.java:276)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:15:02,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:15:03
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/insertNode,
+	arg:["cccc44a6-7812-44b1-9bc2-092468cfbf7c", "YYY"],
+	url:http://localhost:8080/KManage/document/insertNode,
+	param:{"pid":["cccc44a6-7812-44b1-9bc2-092468cfbf7c"],"name":["YYY"]},
+	info:java.lang.ClassCastException:org.cox.dao.entity.Record cannot be cast to com.skynet.knowledge.bean.User
+	at com.skynet.knowledge.utils.KmUtils.getLoginUser(KmUtils.java:13)
+	at com.skynet.knowledge.action.DocumentAction.insertNode(DocumentAction.java:276)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:15:03,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:15:03
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/insertNode,
+	arg:["cccc44a6-7812-44b1-9bc2-092468cfbf7c", "YYY"],
+	url:http://localhost:8080/KManage/document/insertNode,
+	param:{"pid":["cccc44a6-7812-44b1-9bc2-092468cfbf7c"],"name":["YYY"]},
+	info:java.lang.ClassCastException:org.cox.dao.entity.Record cannot be cast to com.skynet.knowledge.bean.User
+	at com.skynet.knowledge.utils.KmUtils.getLoginUser(KmUtils.java:13)
+	at com.skynet.knowledge.action.DocumentAction.insertNode(DocumentAction.java:276)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:15:03,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:15:03
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/insertNode,
+	arg:["cccc44a6-7812-44b1-9bc2-092468cfbf7c", "YYY"],
+	url:http://localhost:8080/KManage/document/insertNode,
+	param:{"pid":["cccc44a6-7812-44b1-9bc2-092468cfbf7c"],"name":["YYY"]},
+	info:java.lang.ClassCastException:org.cox.dao.entity.Record cannot be cast to com.skynet.knowledge.bean.User
+	at com.skynet.knowledge.utils.KmUtils.getLoginUser(KmUtils.java:13)
+	at com.skynet.knowledge.action.DocumentAction.insertNode(DocumentAction.java:276)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:15:03,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:15:14
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/insertNode,
+	arg:["cccc44a6-7812-44b1-9bc2-092468cfbf7c", "YYY"],
+	url:http://localhost:8080/KManage/document/insertNode,
+	param:{"pid":["cccc44a6-7812-44b1-9bc2-092468cfbf7c"],"name":["YYY"]},
+	info:java.lang.ClassCastException:org.cox.dao.entity.Record cannot be cast to com.skynet.knowledge.bean.User
+	at com.skynet.knowledge.utils.KmUtils.getLoginUser(KmUtils.java:13)
+	at com.skynet.knowledge.action.DocumentAction.insertNode(DocumentAction.java:276)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:15:14,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:17:24
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/insertNode,
+	arg:["cccc44a6-7812-44b1-9bc2-092468cfbf7c", "YYY"],
+	url:http://localhost:8080/KManage/document/insertNode,
+	param:{"pid":["cccc44a6-7812-44b1-9bc2-092468cfbf7c"],"name":["YYY"]},
+	info:java.lang.ClassCastException:org.cox.dao.entity.Record cannot be cast to com.skynet.knowledge.bean.User
+	at com.skynet.knowledge.utils.KmUtils.getLoginUser(KmUtils.java:13)
+	at com.skynet.knowledge.action.DocumentAction.insertNode(DocumentAction.java:276)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:17:24,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:17:52
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/insertNode,
+	arg:["cccc44a6-7812-44b1-9bc2-092468cfbf7c", "YYY"],
+	url:http://localhost:8080/KManage/document/insertNode,
+	param:{"pid":["cccc44a6-7812-44b1-9bc2-092468cfbf7c"],"name":["YYY"]},
+	info:java.lang.ClassCastException:org.cox.dao.entity.Record cannot be cast to com.skynet.knowledge.bean.User
+	at com.skynet.knowledge.utils.KmUtils.getLoginUser(KmUtils.java:13)
+	at com.skynet.knowledge.action.DocumentAction.insertNode(DocumentAction.java:276)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:17:52,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:18:21
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/insertNode,
+	arg:["cccc44a6-7812-44b1-9bc2-092468cfbf7c", "YYY"],
+	url:http://localhost:8080/KManage/document/insertNode,
+	param:{"pid":["cccc44a6-7812-44b1-9bc2-092468cfbf7c"],"name":["YYY"]},
+	info:java.lang.ClassCastException:org.cox.dao.entity.Record cannot be cast to com.skynet.knowledge.bean.User
+	at com.skynet.knowledge.utils.KmUtils.getLoginUser(KmUtils.java:13)
+	at com.skynet.knowledge.action.DocumentAction.insertNode(DocumentAction.java:276)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.AuthorityFilter.doFilter(AuthorityFilter.java:306)
+	at com.skynet.watchdog.filter.SessionFilter.doFilter(SessionFilter.java:64)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:18:21,
+	userid:1e55e4c2-b3b5-44c7-aad7-55a3a95c48c0,
+	userip:10.166.7.201,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:39:58
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocs,
+	arg:[null, null, null, 1, 10],
+	url:http://localhost:8080/KManage/document/getDocs,
+	param:{"pageNumber":["1"],"pageSize":["10"]},
+	info:org.cox.dao.SqlNotFoundException:fail to find SQL 'getDocs'!
+	at org.cox.dao.impl.AbstractSqlManager.get(AbstractSqlManager.java:79)
+	at com.skynet.knowledge.services.DocumentService.queryDocs(DocumentService.java:132)
+	at com.skynet.knowledge.action.DocumentAction.getDocs(DocumentAction.java:76)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:39:58,
+	userid:null,
+	userip:null,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:47:47
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocs,
+	arg:[null, null, null, 1, 10],
+	url:http://localhost:8080/KManage/document/getDocs,
+	param:{"pageNumber":["1"],"pageSize":["10"]},
+	info:org.cox.dao.SqlNotFoundException:fail to find SQL 'getDocs'!
+	at org.cox.dao.impl.AbstractSqlManager.get(AbstractSqlManager.java:79)
+	at com.skynet.knowledge.services.DocumentService.queryDocs(DocumentService.java:132)
+	at com.skynet.knowledge.action.DocumentAction.getDocs(DocumentAction.java:78)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:47:47,
+	userid:null,
+	userip:null,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:54:15
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocs,
+	arg:[null, "", "", 1, 10],
+	url:http://localhost:8080/KManage/document/getDocs,
+	param:{"docname":[""],"version":[""],"pageNumber":["1"],"pageSize":["10"]},
+	info:org.cox.dao.SqlNotFoundException:fail to find SQL 'getDocs'!
+	at org.cox.dao.impl.AbstractSqlManager.get(AbstractSqlManager.java:79)
+	at com.skynet.knowledge.services.DocumentService.queryDocs(DocumentService.java:132)
+	at com.skynet.knowledge.action.DocumentAction.getDocs(DocumentAction.java:78)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:54:15,
+	userid:null,
+	userip:null,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:54:33
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocs,
+	arg:[null, "", "", 1, 10],
+	url:http://localhost:8080/KManage/document/getDocs,
+	param:{"docname":[""],"version":[""],"pageNumber":["1"],"pageSize":["10"]},
+	info:org.cox.dao.SqlNotFoundException:fail to find SQL 'getDocs'!
+	at org.cox.dao.impl.AbstractSqlManager.get(AbstractSqlManager.java:79)
+	at com.skynet.knowledge.services.DocumentService.queryDocs(DocumentService.java:132)
+	at com.skynet.knowledge.action.DocumentAction.getDocs(DocumentAction.java:78)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:54:33,
+	userid:null,
+	userip:null,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:54:44
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocs,
+	arg:[null, null, null, 1, 10],
+	url:http://localhost:8080/KManage/document/getDocs,
+	param:{"pageNumber":["1"],"pageSize":["10"]},
+	info:org.cox.dao.SqlNotFoundException:fail to find SQL 'getDocs'!
+	at org.cox.dao.impl.AbstractSqlManager.get(AbstractSqlManager.java:79)
+	at com.skynet.knowledge.services.DocumentService.queryDocs(DocumentService.java:132)
+	at com.skynet.knowledge.action.DocumentAction.getDocs(DocumentAction.java:78)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:54:44,
+	userid:null,
+	userip:null,
+	tz1:null,
+}
+[异常日志信息]- 2017-03-06 10:54:47
+{
+	code:002016,
+	mark:其余异常,
+	path:/document/getDocs,
+	arg:[null, "", "", 1, 10],
+	url:http://localhost:8080/KManage/document/getDocs,
+	param:{"docname":[""],"version":[""],"pageNumber":["1"],"pageSize":["10"]},
+	info:org.cox.dao.SqlNotFoundException:fail to find SQL 'getDocs'!
+	at org.cox.dao.impl.AbstractSqlManager.get(AbstractSqlManager.java:79)
+	at com.skynet.knowledge.services.DocumentService.queryDocs(DocumentService.java:132)
+	at com.skynet.knowledge.action.DocumentAction.getDocs(DocumentAction.java:78)
+	at org.cox.mvc.impl.processor.MethodInvokeProcessor.process(MethodInvokeProcessor.java:27)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.AdaptorProcessor.process(AdaptorProcessor.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ActionFiltersProcessor.process(ActionFiltersProcessor.java:49)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.ModuleProcessor.process(ModuleProcessor.java:117)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at com.skynet.watchdog.log.SkynetLogProcess.process(SkynetLogProcess.java:34)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.EncodingProcessor.process(EncodingProcessor.java:31)
+	at org.cox.mvc.impl.processor.AbstractProcessor.doNext(AbstractProcessor.java:55)
+	at org.cox.mvc.impl.processor.UpdateRequestAttributesProcessor.process(UpdateRequestAttributesProcessor.java:18)
+	at org.cox.mvc.impl.NutActionChain.doChain(NutActionChain.java:49)
+	at org.cox.mvc.impl.ActionInvoker.invoke(ActionInvoker.java:74)
+	at org.cox.mvc.ActionHandler.handle(ActionHandler.java:36)
+	at org.cox.mvc.NutFilter.doFilter(NutFilter.java:216)
+	at com.skynet.watchdog.filter.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:41)
+	at com.skynet.watchdog.filter.ForceNoCacheFilter.doFilter(ForceNoCacheFilter.java:23),
+	id:null,
+	logger:10.166.7.201,
+	czsj:2017-03-06 10:54:47,
+	userid:null,
+	userip:null,
+	tz1:null,
+}

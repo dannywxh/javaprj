@@ -1,0 +1,39 @@
+/*查询所有的项目立项数据*/
+/*queryXmlx*/
+select  t.id,t.bt from task t where rwlx='XMLX'
+
+
+/*getDocsByCId*/
+select 
+ID,			
+CID,
+NAME,			
+CREATOR,			
+CREATEDATE,		
+CREATORIP,			
+VERSION,			
+DOCNO,			
+KEYWORD,			
+PATH,			
+MEMO,			
+CONTENTTYPE,			
+FILEEXT	
+from km_doc where cid='$cid'
+
+/*getDocs*/
+select 
+ID,			
+CID,
+NAME,			
+CREATOR,			
+CREATEDATE,		
+CREATORIP,			
+VERSION,			
+DOCNO,			
+KEYWORD,			
+PATH,			
+MEMO,			
+CONTENTTYPE,			
+FILEEXT			
+from km_doc $where 
+

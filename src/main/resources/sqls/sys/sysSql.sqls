@@ -1,0 +1,148 @@
+/*find_user_resource*/
+ 	SELECT RE.*,AR.PARAM
+      FROM SYS_USER                 US JOIN 
+           SYS_USER_ROLE            UR ON US.ID=UR.USERID JOIN 
+           SYS_ROLE                 RL ON UR.ROLEID=RL.ID JOIN 
+           SYS_ROLE_AUTHORITY       RA ON RL.ID=RA.ROLEID JOIN 
+           SYS_AUTHORITY            AU ON RA.AUTHORITYID = AU.ID JOIN 
+           SYS_AUTHORITY_RESOURCES  AR ON AU.ID = AR.AUTHORITYID JOIN 
+           SYS_RESOURCES            RE ON AR.RESOURCESID = RE.ID
+     WHERE  US.YXX = 1
+       AND RL.YXX = 1
+       AND AU.YXX = 1
+       AND RE.YXX = 1
+       $condition
+
+/*find_user_power*/
+ 	SELECT AU.*
+      FROM SYS_USER                 US JOIN 
+           SYS_USER_ROLE            UR ON US.ID=UR.USERID JOIN 
+           SYS_ROLE                 RL ON UR.ROLEID=RL.ID JOIN 
+           SYS_ROLE_AUTHORITY       RA ON RL.ID=RA.ROLEID JOIN 
+           SYS_AUTHORITY            AU ON RA.AUTHORITYID = AU.ID 
+     WHERE  US.YXX = 1
+       AND RL.YXX = 1
+       AND AU.YXX = 1
+       $condition
+
+/*find_user_roles*/
+ 	SELECT RL.*
+      FROM SYS_USER                 US JOIN 
+           SYS_USER_ROLE            UR ON US.ID=UR.USERID JOIN 
+           SYS_ROLE                 RL ON UR.ROLEID=RL.ID 
+     WHERE  US.YXX = 1
+       AND RL.YXX = 1
+       $condition
+
+/*query_users_login*/
+	SELECT US.ID,
+	       US.XM,
+	       US.SFZH,
+	       US.ACCOUNT,
+	       US.JGDM,
+	       US.GWDM,
+	       US.GZXM,
+	       US.BDIP,
+	       JG.NAME AS JGMC,
+	       GW.NAME AS GWMC
+	  FROM SYS_USER US 
+	  		LEFT JOIN  WORK_DEPT JG ON US.JGDM = JG.ID
+	  		LEFT JOIN  WORK_POST GW ON US.GWDM = GW.ID
+	 WHERE UPPER(US.ACCOUNT) = @account 
+	     AND US.PASSWORD = @password 
+		 AND US.YXX=1 
+
+/*query_users_Iplogin*/
+	SELECT US.ID,
+	       US.XM,
+	       US.SFZH,
+	       US.ACCOUNT,
+	       US.JGDM,
+	       US.GWDM,
+	       US.BDIP,
+	       US.GZXM,
+	       JG.NAME AS JGMC,
+	       GW.NAME AS GWMC
+	  FROM SYS_USER US 
+	  		LEFT JOIN  WORK_DEPT JG ON US.JGDM = JG.ID
+	  		LEFT JOIN  WORK_POST GW ON US.GWDM = GW.ID
+	 WHERE US.bdip = @ip  
+		 AND US.YXX=1 
+
+/*query_users_Idlogin*/
+	SELECT US.ID,
+	       US.XM,
+	       US.SFZH,
+	       US.ACCOUNT,
+	       US.JGDM,
+	       US.GWDM,
+	       US.BDIP,
+	       US.GZXM,
+	       JG.NAME AS JGMC,
+	       GW.NAME AS GWMC
+	  FROM SYS_USER US 
+	  		LEFT JOIN  WORK_DEPT JG ON US.JGDM = JG.ID
+	  		LEFT JOIN  WORK_POST GW ON US.GWDM = GW.ID
+	 WHERE US.ID = @id
+	   AND US.YXX=1
+
+/*query_users_sfzh*/
+	SELECT US.ID,
+	       US.XM,
+	       US.SFZH,
+	       US.ACCOUNT,
+	       US.JGDM,
+	       US.GWDM,
+	       US.BDIP,
+	       US.GZXM,
+	       JG.NAME AS JGMC,
+	       GW.NAME AS GWMC
+	  FROM SYS_USER US 
+	  		LEFT JOIN  WORK_DEPT JG ON US.JGDM = JG.ID
+	  		LEFT JOIN  WORK_POST GW ON US.GWDM = GW.ID
+	 WHERE US.SFZH = @sfzh
+
+/*query_users_id*/
+	SELECT US.ID,
+	       US.XM,
+	       US.SFZH,
+	       US.ACCOUNT,
+	       US.JGDM,
+	       US.GWDM,
+	       US.BDIP,
+	       US.GZXM,
+	       JG.NAME AS JGMC,
+	       GW.NAME AS GWMC
+	  FROM SYS_USER US 
+	  		LEFT JOIN  WORK_DEPT JG ON US.JGDM = JG.ID
+	  		LEFT JOIN  WORK_POST GW ON US.GWDM = GW.ID
+	 WHERE US.ID  = @userid
+
+/*query_users_jgxx*/
+	SELECT NAME AS MC
+	FROM WORK_DEPT 
+	WHERE JGDM = @jgdm
+
+/*update_old_resource*/
+	UPDATE SYS_RESOURCES SET FLAG=0
+
+/*clear_old_resource*/
+   	DELETE SYS_RESOURCES WHERE FLAG=0
+
+/*clear_old_rta*/
+	DELETE SYS_AUTHORITY_RESOURCES 
+  	WHERE ID NOT IN (
+  		SELECT AR.ID
+  		FROM  SYS_AUTHORITY_RESOURCES  AR JOIN 
+        	  SYS_RESOURCES            RE ON AR.RESOURCESID = RE.ID
+     	WHERE RE.FLAG=1 )
+
+/*clear_resources_status*/
+	DELETE SYS_RESOURCES_STATUS
+  	WHERE RESOURCESID NOT IN (
+  		SELECT ID FROM  SYS_RESOURCES WHERE FLAG=1) 
+
+/*update_resources_status*/
+	UPDATE SYS_RESOURCES RE
+	SET YXX = (SELECT YXX FROM SYS_RESOURCES_STATUS RS WHERE RE.ID=RS.RESOURCESID)
+	WHERE exists(SELECT RS.ID FROM SYS_RESOURCES_STATUS RS WHERE RE.ID=RS.RESOURCESID)

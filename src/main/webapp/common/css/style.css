@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+.inputfont {
+	font-size: 10px !important;
+	font-family: "微软雅黑" !important;
+}
+.text{
+	text-align: right;
+}

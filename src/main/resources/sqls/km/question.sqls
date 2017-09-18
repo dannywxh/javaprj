@@ -1,0 +1,18 @@
+/*getIndexList*/
+select id,title,content,creator,createdate,
+	creatorname,replycount,lastreplier,lastreplydate 
+from km_question
+$where
+order by createdate
+
+
+/*getDetailData*/
+select r.*,
+       u.xm as xm,
+       (select count(d.id) from km_question d where d.creator = r.replierid) as creator,
+       (select count(pr.id) from km_reply pr where pr.replierId = r.replierid) as replier,
+       'tz' as type
+  from km_reply r
+  left join sys_user u
+    on u.id = r.replierId
+ 	$where

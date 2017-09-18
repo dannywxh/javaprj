@@ -1,0 +1,76 @@
+/*getRoleList*/
+select a.id, 
+	   a.name, 
+	   a.mark, 
+	   a.yxx,
+	   NVL(b.JC,b.MC) yxxmc, 
+	   to_char(a.gxsj ,'yyyy-mm-dd hh24:mi') gxsj,
+	   case when $pid then 0 else 1 end sx
+from SYS_ROLE a
+	left join PM_CODE b on b.lx='YXX' and b.dm=to_char(a.yxx)
+$condition
+order by sx,name
+
+/*getRoleById*/
+select * from (
+select a.*
+from SYS_ROLE a
+$condition
+)
+where rownum<=1
+
+/*getPowerList*/
+select a.id,a.name,a.mark,a.yxx ,NVL(b.JC,b.MC) yxxmc
+from SYS_AUTHORITY a
+	left join PM_CODE b on b.lx='YXX' and b.dm=to_char(a.yxx)
+$condition
+order by a.yxx,a.name
+
+/*getPowerIdByRoleId*/
+select a.AUTHORITYid 
+from SYS_ROLE_AUTHORITY a
+$condition
+
+/*getRoleTree*/
+select a.id "id",a.pid "pid",a.name "name",a.mark "col1",
+       case
+         when exists(select id from  SYS_ROLE b where b.pid is not null and a.id =b.pid and b.yxx = 1) then
+          'true'
+         else
+          'false'
+       end "isParent"
+from SYS_ROLE a 
+where a.yxx <> 0 
+$condition
+
+/*getRoleTreeByPower*/
+with tmp as(
+	select 
+			a.id,
+			a.pid,
+			a.name,
+			a.mark
+	from SYS_ROLE a
+		join sys_user_role c on a.id=c.roleid 
+		join sys_user b on b.id = c.userid
+	where a.yxx = 1 
+	$condition
+)
+select 
+		distinct
+		a.id "id",
+		a.pid "pid",
+		a.name "name",
+		a.mark "col1", 
+		case when  b.id is not null
+				then 'true'
+					 else 'false' end "isParent"
+from tmp a left join tmp b on b.pid=a.id and b.yxx = 1
+
+/*insertRolePower*/
+insert into SYS_ROLE_AUTHORITY(id,roleid,AUTHORITYid) 
+select  sys_guid() id,
+        @roleId roleid, 
+		a.id AUTHORITYID 
+from SYS_AUTHORITY a
+where a.id in ($powerId)

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<!-- 权限控制配置 -->
+	<authorityconfig>
+		<!-- 忽略列表 -->
+		<filtrate>
+			<item>login.jsp</item>
+			<item>sys/logIn</item>
+			<item>sys/logOut</item>
+			<item>*.css</item>
+			<item>*.js</item>
+			<item>*.jpg</item>
+			<item>*.jpeg</item>
+			<item>*.bmp</item>
+			<item>*.png</item>
+			<item>*.gif</item>
+			<item>*.ico</item>
+			<item>*.png</item>
+		</filtrate>
+		<!-- 会话参数名称 -->
+		<attributename>user</attributename>
+		<!-- 登陆页面 -->
+		<loginpage>login.jsp</loginpage>
+		<!-- 默认页面 -->
+		<defaultpage>index.jsp</defaultpage>
+		<!-- SQL路径 -->
+		<sqlpath>sqls/sys/sysSql.sqls</sqlpath>
+		<!-- 权限提示页面引用元素 -->
+		<powerelement>
+			&lt;script type="text/javascript" src="#BasePath/common/js/jquery-1.8.3.js"&gt;&lt;/script&gt;
+			&lt;script type="text/javascript" src="#BasePath/common/js/ui/skynetUI.js"&gt;&lt;/script&gt;
+		</powerelement>
+	</authorityconfig>
+	<resourceconfig>
+		<path>com.skynet</path>
+	</resourceconfig>
+</config>

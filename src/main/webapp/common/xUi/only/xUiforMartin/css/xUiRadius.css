@@ -1,0 +1,81 @@
+/*----------------------panel--------------------------*/
+.xui-panel,
+.panel-border {
+    border-radius: 6px;
+}
+
+.panel-head {
+    /*border-top-left-radius: 6px;*/
+    /*border-top-right-radius: 6px;*/
+}
+
+.xui-panel-foot {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.panel-shadow-msg {
+    border-radius: 6px;
+}
+
+.panel-toolbar {
+    /*border-top-left-radius: 6px;*/
+    /*border-top-right-radius: 6px;*/
+}
+
+/*---------combox-Select--------------------*/
+.combo-select {
+    border-radius: 4px;
+}
+
+.combo-select-comboDiv {
+    border-radius: 4px;
+}
+
+.combo-select-comboDiv-float {
+    border-radius: 4px;
+}
+
+.combo-select-float-input {
+    border-radius: 2px;
+}
+
+/*-------------------------pager-----------------------*/
+.pager-warpDiv {
+    border-radius: 4px;
+}
+
+.pager-input {
+    border-radius: 4px;
+}
+
+.pager-warpDiv-empty {
+    border-radius: 4px;
+}
+
+/*------------tabs----------------*/
+
+.ul-top > li {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.ul-bottom > li {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.ul-left > li {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.ul-right > li {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/*-----------------dialog----------------------*/
+.xui-dialog-main {
+    border-radius: 6px
+}

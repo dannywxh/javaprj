@@ -1,0 +1,34 @@
+/*getResourceList*/
+select a.id,a.name,a.type,a.url,a.project,a.mark,a.gxsj,a.yxx,NVL(b.JC,b.MC) yxxmc
+from SYS_RESOURCES a
+left join PM_CODE b on b.lx='YXX' and b.dm=to_char(a.yxx)
+$condition
+order by a.url
+
+/*add_resource_status*/
+INSERT INTO SYS_RESOURCES_STATUS 
+(ID,RESOURCESID,YXX) SELECT sys_guid(),ID,@yxx
+FROM SYS_RESOURCES
+$condition
+
+/*getRscTree*/
+select 
+  a.id "id",
+  a.pid "pid",
+  case when a.url is not null then a.name||'【'||a.url||'】' else a.name end "name",
+  case when a.type='leaf' then 'false' else 'true' end "isParent",
+  a.name "col1",
+  a.url "col2",
+  a.yxx "yxx",
+  NVL(b.JC,b.MC) "yxxmc",
+  case when length(a.id)>0 and a.id in($ids)  then 'true' else 'false' end "halfCheck"
+from SYS_RESOURCES a
+left join PM_CODE b on b.lx='YXX' and b.dm = to_char(a.yxx)
+where a.yxx!=0
+order by a.name
+
+/*find_resourceByPowerId*/
+select b.id 
+from SYS_AUTHORITY_RESOURCES a 
+join SYS_RESOURCES b on b.id=a.resourcesid and b.yxx!=0 
+$condition
